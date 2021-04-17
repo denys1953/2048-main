@@ -1,6 +1,12 @@
 let field = document.getElementById('field-type')
 let score = document.getElementById('score')
 let best = document.getElementById('best')
+let container = document.getElementsByClassName('container')
+let btn = document.getElementsByClassName('btn')
+btn[0].addEventListener('click', buttonLeft)
+btn[1].addEventListener('click', buttonRight)
+btn[2].addEventListener('click', buttonUp)
+btn[3].addEventListener('click', buttonDown)
 let elemCount, count2, count = 0
 let array = []
 let array2 = []
@@ -9,6 +15,12 @@ let subarray2 = []
 let filter = []
 let size = 4
 let sum = 0
+const windowInnerWidth = window.innerWidth
+
+if (windowInnerWidth <= 460) {
+   container[0].style.width = 340 + 'px'
+}
+
 
 for (let i = 0; i < 16; i++) {
    let elem = document.createElement('div')
@@ -188,7 +200,7 @@ function scoreCount() {
 function setColor() {
    for (let i = 0; i < elems.length; i++) {
       if (elems[i].innerHTML == 2) elems[i].style.backgroundColor = "#eee4da"
-      else if (elems[i].innerHTML == 4) elems[i].style.backgroundColor = "#eee1c9";
+      else if (elems[i].innerHTML == 4) elems[i].style.backgroundColor = "#eee1c9"
       else if (elems[i].innerHTML == 8) elems[i].style.backgroundColor = "#f3b27a"
       else if (elems[i].innerHTML == 16) elems[i].style.backgroundColor = "#f69664"
       else if (elems[i].innerHTML == 32) elems[i].style.backgroundColor = "#f67c60"
@@ -220,19 +232,15 @@ document.addEventListener('keydown', (e) => {
    switch (e.keyCode) {
       case 37:
          buttonLeft()
-         generateNums(1)
          break
       case 38:
          buttonUp()
-         generateNums(1)
          break
       case 39:
          buttonRight()
-         generateNums(1)
          break
       case 40:
          buttonDown()
-         generateNums(1)
          break
    }
 })
@@ -241,21 +249,25 @@ function buttonLeft() {
    reClearArr()
    mainLeft(); mainLeft()
    reDrawField()
+   generateNums(1)
 }
 function buttonRight() {
    reClearArr()
    mainRight(); mainRight()
    reDrawField()
+   generateNums(1)
 }
 function buttonUp() {
    verticalReClearArr()
-   mainUp(); 
-   horisontalReClearArr()
+   mainUp()
+   horisontalReClearArr(); 
    hReDrawField()
+   generateNums(1)
 }
 function buttonDown() {
    verticalReClearArr()
    mainDown();
    horisontalReClearArr()
    hReDrawField()
+   generateNums(1)
 }
