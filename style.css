@@ -1,0 +1,24 @@
+
+.elem {
+   width: 125px;
+   height: 125px;
+   background-color: #cdc1b4;
+   border: 7px solid #bbada0;
+   text-align: center;
+   padding: 0.3em 0;
+   display: inline-block;
+   color: #f9f6f2;
+   font-size: 55px;
+   font-family: 'Roboto', sans-serif;
+}
+.field {
+   margin-top: 20px;
+   border: 7px solid #bbada0;
+   border-radius: 5px;
+}
+#score {
+   margin-top: 20px;
+}
+#best {
+   margin-top: 20px;
+}
