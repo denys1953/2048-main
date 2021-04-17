@@ -21,6 +21,13 @@ if (windowInnerWidth <= 460) {
    container[0].style.width = 340 + 'px'
 }
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+   console.log('mobile')
+} else {
+   for (let i = 0; i < btn.length; i++) {
+      btn[i].hidden = true
+   }
+}
 
 for (let i = 0; i < 16; i++) {
    let elem = document.createElement('div')
