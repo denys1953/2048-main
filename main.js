@@ -4,9 +4,9 @@ let best = document.getElementById('best')
 let container = document.getElementsByClassName('container')
 let btn = document.getElementsByClassName('btn')
 btn[0].addEventListener('click', buttonLeft)
-btn[1].addEventListener('click', buttonRight)
+btn[1].addEventListener('click', buttonDown)
 btn[2].addEventListener('click', buttonUp)
-btn[3].addEventListener('click', buttonDown)
+btn[3].addEventListener('click', buttonRight)
 let elemCount, count2, count = 0
 let array = []
 let array2 = []
