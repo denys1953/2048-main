@@ -6,10 +6,9 @@ let array = []
 let array2 = []
 let subarray = []
 let subarray2 = []
+let filter = []
 let size = 4
 let sum = 0
-let filter = []
-
 
 for (let i = 0; i < 16; i++) {
    let elem = document.createElement('div')
@@ -36,7 +35,6 @@ function generateNums(a) {
                continue
             } else {
                elems[randNum].innerHTML = 2
-               // elems[randNum].style.backgroundColor = '#eee4da'
                scoreCount()
             }
             count++
@@ -47,34 +45,6 @@ function generateNums(a) {
 }
 
 generateNums(2)
-
-function setColor() {
-   for (let i = 0; i < elems.length; i++) {
-      if (elems[i].innerHTML == 2) elems[i].style.backgroundColor = "#eee4da"
-      else if (elems[i].innerHTML == 4) elems[i].style.backgroundColor = "#eee1c9";
-      else if (elems[i].innerHTML == 8) elems[i].style.backgroundColor = "#f3b27a"
-      else if (elems[i].innerHTML == 16) elems[i].style.backgroundColor = "#f69664"
-      else if (elems[i].innerHTML == 32) elems[i].style.backgroundColor = "#f67c60"
-      else if (elems[i].innerHTML == 64) elems[i].style.backgroundColor = "#f65e3b"
-      else if (elems[i].innerHTML == 128) elems[i].style.backgroundColor = "#edcf73"
-      else if (elems[i].innerHTML == 256) elems[i].style.backgroundColor = "#edcc62"
-      else if (elems[i].innerHTML == 512) elems[i].style.backgroundColor = "#edc850"
-      else if (elems[i].innerHTML == 1024) elems[i].style.backgroundColor = "#edc53f"
-      else if (elems[i].innerHTML == 2048) elems[i].style.backgroundColor = "#edc22d"
-      else {
-         elems[i].style.backgroundColor = '#cdc1b4'
-      }
-   }
-   for (let i = 0; i < elems.length; i++) {
-      if (elems[i].innerHTML == 2 || elems[i].innerHTML == 4) {
-         elems[i].style.color = '#776e65'
-      } else {
-         elems[i].style.color = '#f9f6f2'
-      }
-   }
-}
-
-setColor()
 
 function mainLeft() {
    let sss
@@ -215,8 +185,35 @@ function scoreCount() {
    setColor()
 }
 
-scoreCount()
+function setColor() {
+   for (let i = 0; i < elems.length; i++) {
+      if (elems[i].innerHTML == 2) elems[i].style.backgroundColor = "#eee4da"
+      else if (elems[i].innerHTML == 4) elems[i].style.backgroundColor = "#eee1c9";
+      else if (elems[i].innerHTML == 8) elems[i].style.backgroundColor = "#f3b27a"
+      else if (elems[i].innerHTML == 16) elems[i].style.backgroundColor = "#f69664"
+      else if (elems[i].innerHTML == 32) elems[i].style.backgroundColor = "#f67c60"
+      else if (elems[i].innerHTML == 64) elems[i].style.backgroundColor = "#f65e3b"
+      else if (elems[i].innerHTML == 128) elems[i].style.backgroundColor = "#edcf73"
+      else if (elems[i].innerHTML == 256) elems[i].style.backgroundColor = "#edcc62"
+      else if (elems[i].innerHTML == 512) elems[i].style.backgroundColor = "#edc850"
+      else if (elems[i].innerHTML == 1024) elems[i].style.backgroundColor = "#edc53f"
+      else if (elems[i].innerHTML == 2048) elems[i].style.backgroundColor = "#edc22d"
+      else {
+         elems[i].style.backgroundColor = '#cdc1b4'
+      }
+   }
+   for (let i = 0; i < elems.length; i++) {
+      if (elems[i].innerHTML == 2 || elems[i].innerHTML == 4) {
+         elems[i].style.color = '#776e65'
+      } else {
+         elems[i].style.color = '#f9f6f2'
+      }
+   }
+}
 
+
+scoreCount()
+setColor()
 reClearArr()
 
 document.addEventListener('keydown', (e) => {

@@ -1,4 +1,6 @@
-
+* {
+   user-select: none;
+}
 .elem {
    width: 125px;
    height: 125px;
