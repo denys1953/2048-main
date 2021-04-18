@@ -229,14 +229,14 @@ function getColorMumber(number) {
  
 function setColor() {
    for (let i = 0; i < elems.length; i++) {
-     elems[i].style.backgroundColor = getColorMumber(elems[i].innerHTML);
+      elems[i].style.backgroundColor = getColorMumber(elems[i].innerHTML);
    }
    for (let i = 0; i < elems.length; i++) {
-     if (elems[i].innerHTML == 2 || elems[i].innerHTML == 4) {
-       elems[i].style.color = "#776e65";
-     } else {
-       elems[i].style.color = "#f9f6f2";
-     }
+      if (elems[i].innerHTML == 2 || elems[i].innerHTML == 4) {
+         elems[i].style.color = "#776e65";
+      } else {
+         elems[i].style.color = "#f9f6f2";
+      }
    }
 }
 
