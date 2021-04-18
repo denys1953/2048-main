@@ -204,29 +204,39 @@ function scoreCount() {
    setColor()
 }
 
+function getColorMumber(number) {
+   let colorList = {
+     0: "#cdc1b4",
+     2: "#eee4da",
+     4: "#eee1c9",
+     8: "#f3b27a",
+     16: "#f69664",
+     32: "#f67c60",
+     64: "#f65e3b",
+     128: "#edcf73",
+     256: "#edcc62",
+     512: "#edc850",
+     1024: "#edc53f",
+     2048: "#edc22d",
+   };
+ 
+   if (colorList[number] !== undefined) {
+     return colorList[number];
+   }
+ 
+   return colorList[0];
+}
+ 
 function setColor() {
    for (let i = 0; i < elems.length; i++) {
-      if (elems[i].innerHTML == 2) elems[i].style.backgroundColor = "#eee4da"
-      else if (elems[i].innerHTML == 4) elems[i].style.backgroundColor = "#eee1c9"
-      else if (elems[i].innerHTML == 8) elems[i].style.backgroundColor = "#f3b27a"
-      else if (elems[i].innerHTML == 16) elems[i].style.backgroundColor = "#f69664"
-      else if (elems[i].innerHTML == 32) elems[i].style.backgroundColor = "#f67c60"
-      else if (elems[i].innerHTML == 64) elems[i].style.backgroundColor = "#f65e3b"
-      else if (elems[i].innerHTML == 128) elems[i].style.backgroundColor = "#edcf73"
-      else if (elems[i].innerHTML == 256) elems[i].style.backgroundColor = "#edcc62"
-      else if (elems[i].innerHTML == 512) elems[i].style.backgroundColor = "#edc850"
-      else if (elems[i].innerHTML == 1024) elems[i].style.backgroundColor = "#edc53f"
-      else if (elems[i].innerHTML == 2048) elems[i].style.backgroundColor = "#edc22d"
-      else {
-         elems[i].style.backgroundColor = '#cdc1b4'
-      }
+     elems[i].style.backgroundColor = getColorMumber(elems[i].innerHTML);
    }
    for (let i = 0; i < elems.length; i++) {
-      if (elems[i].innerHTML == 2 || elems[i].innerHTML == 4) {
-         elems[i].style.color = '#776e65'
-      } else {
-         elems[i].style.color = '#f9f6f2'
-      }
+     if (elems[i].innerHTML == 2 || elems[i].innerHTML == 4) {
+       elems[i].style.color = "#776e65";
+     } else {
+       elems[i].style.color = "#f9f6f2";
+     }
    }
 }
 
