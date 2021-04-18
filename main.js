@@ -266,7 +266,7 @@ function swipedetect(el, callback){
    startY,
    distX,
    distY,
-   threshold = 150, 
+   threshold = 100, 
    restraint = 100, 
    allowedTime = 300, 
    elapsedTime,
@@ -307,7 +307,6 @@ function swipedetect(el, callback){
 
 
 var el = document.getElementById('wrapper')
-var inner = document.getElementById('inner')
 var hidetimer = null
 swipedetect(el, function(swipedir){
    if (swipedir == 'left'){
