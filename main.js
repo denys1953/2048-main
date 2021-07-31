@@ -64,7 +64,7 @@ function mainLeft() {
          filter[i][1] *= 2; filter[i][2] = '&nbsp;'
       } else if (filter[i][2] === filter[i][3] && filter[i][2] !== '&nbsp;') {
          filter[i][2] *= 2; filter[i][3] = '&nbsp;'
-      }
+      } 
    }
 }
 function mainRight() {

@@ -26,7 +26,7 @@
   margin-top: 20px;
 }
 
-@media screen and (max-width: 451px) {
+@media screen and (max-width: 452px) {
   .elem {
     width: 75px;
     height: 75px;
